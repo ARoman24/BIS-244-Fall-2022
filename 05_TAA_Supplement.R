@@ -57,6 +57,7 @@ p <- ggplot(data = gapminder,
 
 p + geom_line(mapping = aes(group = country)) + 
     facet_wrap(~ continent)      
+#separates it into small data sets by countries
 
 # Note how the layout of the picture allows facets to share axes titles
 
@@ -83,7 +84,7 @@ p + geom_line(color="gray70", mapping=aes(group = country)) +
          title = "GDP per capita on Five Continents")      
 
 # Why did we specify "se = FALSE"?
-
+#no standard error, patterns and groups acting as standard error.
 # Healy switches to GSS data. Let's look at it:
 
 View(gss_sm)
