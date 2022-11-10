@@ -7,7 +7,7 @@ library(socviz)
 
 
 ## 5.1 Use Pipes to Summarize Data
-
+rel_by <- gss_sm
 rel_by_region <- gss_sm %>%
     group_by(bigregion, religion) %>%
     summarize(N = n()) %>%

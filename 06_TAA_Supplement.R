@@ -41,6 +41,7 @@ p + geom_bar(mapping = aes(y = ..prop.., group = 1))
 table(gss_sm$religion)
 
 # Use geom_bar() again, but specify x & color = religion in ggplot()
+#only outlines bar not fills in color
 
 p <- ggplot(data = gss_sm,
             mapping = aes(x = religion, color = religion))
@@ -53,14 +54,14 @@ p <- ggplot(data = gss_sm,
 p + geom_bar() 
 
 # But do we really need a legend in this case?
-
+#to remove legend
 p + geom_bar() + guides(fill = FALSE)
 
 
 ## 4.5 Frequency Plots the Slightly Awkward Way
 
 # Let's specify x = bigregion, but fill=religion
-
+##stacked bars with how much of each religion in each region 
 p <- ggplot(data = gss_sm,
             mapping = aes(x = bigregion, 
                           fill = religion))
@@ -69,7 +70,7 @@ p + geom_bar()
 # Note that, here, we DO need a legend
 
 # But colors here are showing counts, not proportions. If we want proportions:
-
+##easier to compare
 p + geom_bar(position = "fill")      
 
 # If we want bars by religion in each bigregion, use "dodge"

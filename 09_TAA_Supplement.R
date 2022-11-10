@@ -87,7 +87,7 @@ p + geom_point(size = 2) + scale_color_brewer(palette = "Pastel2") +
 p + geom_point(size = 2) + scale_color_brewer(palette = "Dark2") +
     theme(legend.position = "top")
 
-# The whole rainbow
+# The whole rainbow to look up colors and code on Hex codes google
 demo('colors')
 
 # Example of a custom color palette

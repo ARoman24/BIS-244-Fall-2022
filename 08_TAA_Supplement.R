@@ -33,6 +33,7 @@ p + geom_point() + geom_text(mapping = aes(label = country), hjust = 0)
       
 
 # ggrepel provides geoms for ggplot2 to repel overlapping text labels:
+#Repels points away from the point
 
 # geom_text_repel()
 # geom_label_repel()
